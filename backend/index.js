@@ -1,9 +1,15 @@
+"use strict";
+
 const express = require("express");
+const authRoutes = require("./routes/authRoutes");
+const visitsRoutes = require("./routes/visitsRoutes");
 
 const app = express();
-const port = Number(process.env.PORT) || 3000;
+const port = Number(process.env.SRV_PORT) || 3000;
 
 app.use(express.json());
+app.use("/", authRoutes);
+app.use("/visits", visitsRoutes);
 
 app.get("/", (req, res) => {
   res.json({ ok: true });

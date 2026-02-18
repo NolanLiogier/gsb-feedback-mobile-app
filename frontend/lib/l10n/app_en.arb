@@ -1,0 +1,118 @@
+{
+  "appTitle": "GSB App",
+  "@appTitle": {
+    "description": "Application title shown in app bar and launcher"
+  },
+  "welcome": "Welcome",
+  "@welcome": {
+    "description": "Generic welcome message"
+  },
+  "localeTest": "Locale test",
+  "@localeTest": {
+    "description": "Heading for locale test screen"
+  },
+  "switchToEnglish": "English",
+  "@switchToEnglish": {
+    "description": "Button label to switch UI to English"
+  },
+  "switchToFrench": "Français",
+  "@switchToFrench": {
+    "description": "Button label to switch UI to French"
+  },
+  "currentLocale": "Current: {locale}",
+  "@currentLocale": {
+    "placeholders": {
+      "locale": {
+        "type": "String"
+      }
+    }
+  },
+  "loginTitle": "LOGIN",
+  "@loginTitle": {
+    "description": "Title of the login screen"
+  },
+  "loginSubtitle": "Account given by GSB administrator",
+  "@loginSubtitle": {
+    "description": "Subtitle under the login title"
+  },
+  "loginEmailLabel": "EMAIL",
+  "@loginEmailLabel": {
+    "description": "Label for the email field on login form"
+  },
+  "loginEmailHint": "name.surname@gsb.fr",
+  "@loginEmailHint": {
+    "description": "Placeholder hint for the email input on the login screen"
+  },
+  "loginPasswordLabel": "PASSWORD",
+  "@loginPasswordLabel": {
+    "description": "Label for the password field on login form"
+  },
+  "loginPasswordHint": "Enter your password",
+  "@loginPasswordHint": {
+    "description": "Placeholder hint for the password input on the login screen"
+  },
+  "loginButton": "Log in",
+  "@loginButton": {
+    "description": "Submit button label on login form"
+  },
+  "loginForgotPassword": "Forgot password?",
+  "@loginForgotPassword": {
+    "description": "Link text for password recovery (removed from UI but kept for l10n)"
+  },
+  "loginFooterCompany": "GALAXY SWISS BOURDIN",
+  "@loginFooterCompany": {
+    "description": "Company name in login footer"
+  },
+  "loginFooterVersion": "Version 2.4.0 - SIO BTS",
+  "@loginFooterVersion": {
+    "description": "Version string in login footer"
+  },
+  "loginErrorRequired": "Email and password are required",
+  "@loginErrorRequired": {
+    "description": "Error when email or password is empty"
+  },
+  "loginSuccessDefault": "Login successful",
+  "@loginSuccessDefault": {
+    "description": "Default success message after login"
+  },
+  "loginErrorDefault": "Request failed",
+  "@loginErrorDefault": {
+    "description": "Default error message when login request fails"
+  },
+  "appBarLogout": "Log out",
+  "@appBarLogout": {
+    "description": "App bar logout button tooltip"
+  },
+  "visitsTitle": "List of Visits",
+  "@visitsTitle": {
+    "description": "Visits screen title"
+  },
+  "visitsSearchHint": "Search for a visit...",
+  "@visitsSearchHint": {
+    "description": "Search field placeholder on visits screen"
+  },
+  "visitsUserNotFound": "User not found",
+  "@visitsUserNotFound": {
+    "description": "Error when no user id in session"
+  },
+  "visitsLoadError": "Failed to load visits",
+  "@visitsLoadError": {
+    "description": "Error when loading visits list fails"
+  },
+  "visitsEmpty": "No visits",
+  "@visitsEmpty": {
+    "description": "Empty state when there are no visits"
+  },
+  "visitsNoResults": "No results",
+  "@visitsNoResults": {
+    "description": "Empty state when search has no results"
+  },
+  "navVisits": "Visits",
+  "@navVisits": {
+    "description": "Bottom nav label for Visits"
+  },
+  "navPlanning": "Planning",
+  "@navPlanning": {
+    "description": "Bottom nav label for Planning"
+  }
+}

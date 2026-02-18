@@ -1,0 +1,118 @@
+{
+  "appTitle": "Application GSB",
+  "@appTitle": {
+    "description": "Application title shown in app bar and launcher"
+  },
+  "welcome": "Bienvenue",
+  "@welcome": {
+    "description": "Generic welcome message"
+  },
+  "localeTest": "Test de langue",
+  "@localeTest": {
+    "description": "Heading for locale test screen"
+  },
+  "switchToEnglish": "Anglais",
+  "@switchToEnglish": {
+    "description": "Button label to switch UI to English"
+  },
+  "switchToFrench": "Français",
+  "@switchToFrench": {
+    "description": "Button label to switch UI to French"
+  },
+  "currentLocale": "Actuel : {locale}",
+  "@currentLocale": {
+    "placeholders": {
+      "locale": {
+        "type": "String"
+      }
+    }
+  },
+  "loginTitle": "Connexion",
+  "@loginTitle": {
+    "description": "Title of the login screen"
+  },
+  "loginSubtitle": "Compte donné par l'administrateur GSB",
+  "@loginSubtitle": {
+    "description": "Subtitle under the login title"
+  },
+  "loginEmailLabel": "EMAIL",
+  "@loginEmailLabel": {
+    "description": "Label for the email field on login form"
+  },
+  "loginEmailHint": "nom.prenom@gsb.fr",
+  "@loginEmailHint": {
+    "description": "Placeholder hint for the email input on the login screen"
+  },
+  "loginPasswordLabel": "MOT DE PASSE",
+  "@loginPasswordLabel": {
+    "description": "Label for the password field on login form"
+  },
+  "loginPasswordHint": "Mot de passe",
+  "@loginPasswordHint": {
+    "description": "Placeholder hint for the password input on the login screen"
+  },
+  "loginButton": "Se connecter",
+  "@loginButton": {
+    "description": "Submit button label on login form"
+  },
+  "loginForgotPassword": "Mot de passe oublié ?",
+  "@loginForgotPassword": {
+    "description": "Link text for password recovery (removed from UI but kept for l10n)"
+  },
+  "loginFooterCompany": "GALAXY SWISS BOURDIN",
+  "@loginFooterCompany": {
+    "description": "Company name in login footer"
+  },
+  "loginFooterVersion": "Version 2.4.0 - SIO BTS",
+  "@loginFooterVersion": {
+    "description": "Version string in login footer"
+  },
+  "loginErrorRequired": "Email et mot de passe requis",
+  "@loginErrorRequired": {
+    "description": "Error when email or password is empty"
+  },
+  "loginSuccessDefault": "Connexion réussie",
+  "@loginSuccessDefault": {
+    "description": "Default success message after login"
+  },
+  "loginErrorDefault": "Échec de la requête",
+  "@loginErrorDefault": {
+    "description": "Default error message when login request fails"
+  },
+  "appBarLogout": "Déconnexion",
+  "@appBarLogout": {
+    "description": "App bar logout button tooltip"
+  },
+  "visitsTitle": "Liste des Visites",
+  "@visitsTitle": {
+    "description": "Visits screen title"
+  },
+  "visitsSearchHint": "Rechercher une visite...",
+  "@visitsSearchHint": {
+    "description": "Search field placeholder on visits screen"
+  },
+  "visitsUserNotFound": "Utilisateur introuvable",
+  "@visitsUserNotFound": {
+    "description": "Error when no user id in session"
+  },
+  "visitsLoadError": "Échec du chargement des visites",
+  "@visitsLoadError": {
+    "description": "Error when loading visits list fails"
+  },
+  "visitsEmpty": "Aucune visite",
+  "@visitsEmpty": {
+    "description": "Empty state when there are no visits"
+  },
+  "visitsNoResults": "Aucun résultat",
+  "@visitsNoResults": {
+    "description": "Empty state when search has no results"
+  },
+  "navVisits": "Visites",
+  "@navVisits": {
+    "description": "Bottom nav label for Visits"
+  },
+  "navPlanning": "Planning",
+  "@navPlanning": {
+    "description": "Bottom nav label for Planning"
+  }
+}

@@ -1,1 +1,4 @@
 designs/*
+docs/*
+docker-compose.yml
+.cursor/*
