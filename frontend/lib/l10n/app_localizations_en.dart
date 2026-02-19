@@ -93,4 +93,43 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get navPlanning => 'Planning';
+
+  @override
+  String get visitDetailsTitle => 'Visit Details';
+
+  @override
+  String get visitDetailsInvalidData => 'Invalid data';
+
+  @override
+  String get visitDetailsLoadError => 'Unable to load';
+
+  @override
+  String get visitDetailsError => 'Error';
+
+  @override
+  String get visitDetailsCurrentStatus => 'CURRENT STATUS';
+
+  @override
+  String get visitDetailsGeneralInfo => 'GENERAL INFORMATION';
+
+  @override
+  String get visitDetailsVisitDate => 'Visit date';
+
+  @override
+  String get visitDetailsTimeSlot => 'Time slot';
+
+  @override
+  String get visitDetailsPracticeLocation => 'Practice location';
+
+  @override
+  String get visitDetailsAssignedVisitor => 'ASSIGNED VISITOR';
+
+  @override
+  String get visitDetailsClient => 'CLIENT';
+
+  @override
+  String get visitDetailsComment => 'COMMENT';
+
+  @override
+  String get visitDetailsCreationDate => 'Creation date';
 }

@@ -35,7 +35,7 @@ abstract final class ApiService {
     if (responseBody.isNotEmpty) {
       try {
         decoded = jsonDecode(responseBody) as Map<String, dynamic>?;
-      } catch (_) {
+      } catch (exception) {
         decoded = null;
       }
     }
@@ -54,7 +54,27 @@ abstract final class ApiService {
     if (responseBody.isNotEmpty) {
       try {
         decoded = jsonDecode(responseBody) as Map<String, dynamic>?;
-      } catch (_) {
+      } catch (exception) {
+        decoded = null;
+      }
+    }
+    return VisitsResult(statusCode: response.statusCode, body: decoded);
+  }
+
+  static Future<VisitsResult> getVisitDatasById(int visitId) async {
+    final uri = Uri.parse(
+        '${AppConstants.apiBaseUrl}/visits/getVisitDatasById');
+    final request = http.Request('GET', uri);
+    request.body = jsonEncode({'visitId': visitId});
+    request.headers['Content-Type'] = 'application/json';
+    final streamedResponse = await http.Client().send(request);
+    final response = await http.Response.fromStream(streamedResponse);
+    Map<String, dynamic>? decoded;
+    final responseBody = response.body;
+    if (responseBody.isNotEmpty) {
+      try {
+        decoded = jsonDecode(responseBody) as Map<String, dynamic>?;
+      } catch (exception) {
         decoded = null;
       }
     }

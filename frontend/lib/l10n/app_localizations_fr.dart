@@ -93,4 +93,43 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get navPlanning => 'Planning';
+
+  @override
+  String get visitDetailsTitle => 'Détails de la Visite';
+
+  @override
+  String get visitDetailsInvalidData => 'Données invalides';
+
+  @override
+  String get visitDetailsLoadError => 'Chargement impossible';
+
+  @override
+  String get visitDetailsError => 'Erreur';
+
+  @override
+  String get visitDetailsCurrentStatus => 'STATUT ACTUEL';
+
+  @override
+  String get visitDetailsGeneralInfo => 'INFORMATIONS GÉNÉRALES';
+
+  @override
+  String get visitDetailsVisitDate => 'Date de la visite';
+
+  @override
+  String get visitDetailsTimeSlot => 'Créneau horaire';
+
+  @override
+  String get visitDetailsPracticeLocation => 'Localisation du cabinet';
+
+  @override
+  String get visitDetailsAssignedVisitor => 'VISITEUR ASSIGNÉ';
+
+  @override
+  String get visitDetailsClient => 'CLIENT';
+
+  @override
+  String get visitDetailsComment => 'COMMENTAIRE';
+
+  @override
+  String get visitDetailsCreationDate => 'Date de création';
 }

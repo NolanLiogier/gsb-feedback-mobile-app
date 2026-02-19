@@ -265,6 +265,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Planning'**
   String get navPlanning;
+
+  /// Visit details screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Visit Details'**
+  String get visitDetailsTitle;
+
+  /// Error when visit details payload is invalid
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid data'**
+  String get visitDetailsInvalidData;
+
+  /// Default error when loading visit details fails
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load'**
+  String get visitDetailsLoadError;
+
+  /// Generic error fallback
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get visitDetailsError;
+
+  /// Current status section label
+  ///
+  /// In en, this message translates to:
+  /// **'CURRENT STATUS'**
+  String get visitDetailsCurrentStatus;
+
+  /// General information section label
+  ///
+  /// In en, this message translates to:
+  /// **'GENERAL INFORMATION'**
+  String get visitDetailsGeneralInfo;
+
+  /// Label for visit date
+  ///
+  /// In en, this message translates to:
+  /// **'Visit date'**
+  String get visitDetailsVisitDate;
+
+  /// Label for time slot
+  ///
+  /// In en, this message translates to:
+  /// **'Time slot'**
+  String get visitDetailsTimeSlot;
+
+  /// Label for practice address
+  ///
+  /// In en, this message translates to:
+  /// **'Practice location'**
+  String get visitDetailsPracticeLocation;
+
+  /// Assigned visitor section label
+  ///
+  /// In en, this message translates to:
+  /// **'ASSIGNED VISITOR'**
+  String get visitDetailsAssignedVisitor;
+
+  /// Client section label
+  ///
+  /// In en, this message translates to:
+  /// **'CLIENT'**
+  String get visitDetailsClient;
+
+  /// Comment section label
+  ///
+  /// In en, this message translates to:
+  /// **'COMMENT'**
+  String get visitDetailsComment;
+
+  /// Label for creation date and time
+  ///
+  /// In en, this message translates to:
+  /// **'Creation date'**
+  String get visitDetailsCreationDate;
 }
 
 class _AppLocalizationsDelegate

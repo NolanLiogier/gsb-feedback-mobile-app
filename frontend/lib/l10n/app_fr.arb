@@ -114,5 +114,57 @@
   "navPlanning": "Planning",
   "@navPlanning": {
     "description": "Bottom nav label for Planning"
+  },
+  "visitDetailsTitle": "Détails de la Visite",
+  "@visitDetailsTitle": {
+    "description": "Visit details screen title"
+  },
+  "visitDetailsInvalidData": "Données invalides",
+  "@visitDetailsInvalidData": {
+    "description": "Error when visit details payload is invalid"
+  },
+  "visitDetailsLoadError": "Chargement impossible",
+  "@visitDetailsLoadError": {
+    "description": "Default error when loading visit details fails"
+  },
+  "visitDetailsError": "Erreur",
+  "@visitDetailsError": {
+    "description": "Generic error fallback"
+  },
+  "visitDetailsCurrentStatus": "STATUT ACTUEL",
+  "@visitDetailsCurrentStatus": {
+    "description": "Current status section label"
+  },
+  "visitDetailsGeneralInfo": "INFORMATIONS GÉNÉRALES",
+  "@visitDetailsGeneralInfo": {
+    "description": "General information section label"
+  },
+  "visitDetailsVisitDate": "Date de la visite",
+  "@visitDetailsVisitDate": {
+    "description": "Label for visit date"
+  },
+  "visitDetailsTimeSlot": "Créneau horaire",
+  "@visitDetailsTimeSlot": {
+    "description": "Label for time slot"
+  },
+  "visitDetailsPracticeLocation": "Localisation du cabinet",
+  "@visitDetailsPracticeLocation": {
+    "description": "Label for practice address"
+  },
+  "visitDetailsAssignedVisitor": "VISITEUR ASSIGNÉ",
+  "@visitDetailsAssignedVisitor": {
+    "description": "Assigned visitor section label"
+  },
+  "visitDetailsClient": "CLIENT",
+  "@visitDetailsClient": {
+    "description": "Client section label"
+  },
+  "visitDetailsComment": "COMMENTAIRE",
+  "@visitDetailsComment": {
+    "description": "Comment section label"
+  },
+  "visitDetailsCreationDate": "Date de création",
+  "@visitDetailsCreationDate": {
+    "description": "Label for creation date and time"
   }
 }

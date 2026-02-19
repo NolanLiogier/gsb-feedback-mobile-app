@@ -11,7 +11,7 @@ async function findUserByEmail(email) {
   if (normalized.length === 0 || normalized.length > 255) {
     throw new RangeError("email length is invalid");
   }
-  const result = await pool.query(
+  let result = await pool.query(
     `SELECT users.user_id, users.firstname, users.lastname, users.email, users.password, users.fk_function_id, users.fk_company_id,
             functions.fonction_name AS function_name, 
             companies.company_name AS company_name
@@ -33,7 +33,7 @@ async function findUserById(userId) {
   if (!Number.isInteger(id) || id < 1) {
     throw new RangeError("userId must be a positive integer");
   }
-  const result = await pool.query(
+  let result = await pool.query(
     `SELECT users.user_id, users.firstname, users.lastname, users.email, users.password, users.fk_function_id, users.fk_company_id,
             functions.fonction_name AS function_name,
             companies.company_name AS company_name
