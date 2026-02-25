@@ -343,6 +343,276 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Creation date'**
   String get visitDetailsCreationDate;
+
+  /// Label for displayed rating when status is completed
+  ///
+  /// In en, this message translates to:
+  /// **'Your rating'**
+  String get visitDetailsRatingLabel;
+
+  /// New visit flow screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Create a Visit'**
+  String get newVisitTitle;
+
+  /// Label for company selector (form screen)
+  ///
+  /// In en, this message translates to:
+  /// **'Practitioner / Establishment'**
+  String get newVisitStep1SelectCompany;
+
+  /// Label for company dropdown on company screen
+  ///
+  /// In en, this message translates to:
+  /// **'Company'**
+  String get newVisitCompanyLabel;
+
+  /// Hint for company dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Select a company'**
+  String get newVisitSelectCompanyHint;
+
+  /// Placeholder for company dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Select a practitioner'**
+  String get newVisitStep1SelectHint;
+
+  /// Cancel button
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get newVisitCancel;
+
+  /// Continue button
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get newVisitContinue;
+
+  /// Heading on new visit form
+  ///
+  /// In en, this message translates to:
+  /// **'New Request'**
+  String get newRequestHeading;
+
+  /// Subtitle on new visit form
+  ///
+  /// In en, this message translates to:
+  /// **'Please fill in the information regarding your next medical visit.'**
+  String get newRequestSubtitle;
+
+  /// Visit date label
+  ///
+  /// In en, this message translates to:
+  /// **'Date of the visit'**
+  String get newVisitVisitDate;
+
+  /// Objective/comment label
+  ///
+  /// In en, this message translates to:
+  /// **'Objective of the visit'**
+  String get newVisitObjective;
+
+  /// Placeholder for objective field
+  ///
+  /// In en, this message translates to:
+  /// **'Describe the main objective and the products to present...'**
+  String get newVisitObjectiveHint;
+
+  /// Submit button
+  ///
+  /// In en, this message translates to:
+  /// **'Create visit'**
+  String get newVisitSendRequest;
+
+  /// Error loading companies list
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load companies'**
+  String get newVisitLoadCompaniesError;
+
+  /// Error loading new visit data
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load form data'**
+  String get newVisitLoadDataError;
+
+  /// Error creating visit
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to create visit'**
+  String get newVisitCreateError;
+
+  /// Success message after creating a visit
+  ///
+  /// In en, this message translates to:
+  /// **'Visit created successfully'**
+  String get newVisitCreateSuccess;
+
+  /// Validation when continuing without selection
+  ///
+  /// In en, this message translates to:
+  /// **'Please select a company'**
+  String get newVisitSelectCompanyFirst;
+
+  /// Validation for empty title
+  ///
+  /// In en, this message translates to:
+  /// **'Title is required'**
+  String get newVisitTitleRequired;
+
+  /// Validation when visitor not selected
+  ///
+  /// In en, this message translates to:
+  /// **'Please select a GSB visitor'**
+  String get newVisitVisitorRequired;
+
+  /// Validation when client not selected
+  ///
+  /// In en, this message translates to:
+  /// **'Please select a client'**
+  String get newVisitEmployeeRequired;
+
+  /// Visitor dropdown hint
+  ///
+  /// In en, this message translates to:
+  /// **'Select a visitor'**
+  String get newVisitSelectVisitor;
+
+  /// Product dropdown hint
+  ///
+  /// In en, this message translates to:
+  /// **'Select a product'**
+  String get newVisitSelectProduct;
+
+  /// Label for GSB visitor dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'GSB Visitor'**
+  String get newVisitGsbVisitorLabel;
+
+  /// Label for client dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Client'**
+  String get newVisitEmployeeLabel;
+
+  /// Hint for client dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Select a client'**
+  String get newVisitSelectEmployee;
+
+  /// Label for product dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Product'**
+  String get newVisitProductLabel;
+
+  /// Label for visit title field
+  ///
+  /// In en, this message translates to:
+  /// **'Visit title'**
+  String get newVisitFormTitleLabel;
+
+  /// Button to open feedback screen
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback'**
+  String get visitDetailsFeedbackBtn;
+
+  /// Delete visit button
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get visitDetailsDeleteBtn;
+
+  /// Delete confirmation dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Delete visit?'**
+  String get visitDetailsDeleteConfirmTitle;
+
+  /// Delete confirmation dialog message
+  ///
+  /// In en, this message translates to:
+  /// **'This visit will be permanently deleted.'**
+  String get visitDetailsDeleteConfirmMessage;
+
+  /// Success message after deleting a visit
+  ///
+  /// In en, this message translates to:
+  /// **'Visit deleted'**
+  String get visitDetailsDeleteSuccess;
+
+  /// Error when delete visit fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to delete visit'**
+  String get visitDetailsDeleteError;
+
+  /// Feedback screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Visit Report'**
+  String get visitFeedbackTitle;
+
+  /// Report section title
+  ///
+  /// In en, this message translates to:
+  /// **'VISIT REPORT'**
+  String get visitFeedbackReportTitle;
+
+  /// Feedback section title
+  ///
+  /// In en, this message translates to:
+  /// **'YOUR OPINION'**
+  String get visitFeedbackYourOpinion;
+
+  /// Rating label
+  ///
+  /// In en, this message translates to:
+  /// **'RATE THIS CONSULTATION'**
+  String get visitFeedbackRateLabel;
+
+  /// Comment field section title
+  ///
+  /// In en, this message translates to:
+  /// **'ADDITIONAL COMMENTS'**
+  String get visitFeedbackAdditionalComments;
+
+  /// Comment placeholder
+  ///
+  /// In en, this message translates to:
+  /// **'What did you think of this visit?'**
+  String get visitFeedbackCommentHint;
+
+  /// Submit feedback button
+  ///
+  /// In en, this message translates to:
+  /// **'Send Feedback'**
+  String get visitFeedbackSendBtn;
+
+  /// Error loading visit for feedback
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load visit'**
+  String get visitFeedbackLoadError;
+
+  /// Error submitting feedback
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to send feedback'**
+  String get visitFeedbackSubmitError;
+
+  /// Success after sending feedback
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback sent'**
+  String get visitsFeedbackSuccess;
 }
 
 class _AppLocalizationsDelegate

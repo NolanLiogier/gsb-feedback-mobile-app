@@ -166,5 +166,185 @@
   "visitDetailsCreationDate": "Creation date",
   "@visitDetailsCreationDate": {
     "description": "Label for creation date and time"
+  },
+  "visitDetailsRatingLabel": "Your rating",
+  "@visitDetailsRatingLabel": {
+    "description": "Label for displayed rating when status is completed"
+  },
+  "newVisitTitle": "Create a Visit",
+  "@newVisitTitle": {
+    "description": "New visit flow screen title"
+  },
+  "newVisitStep1SelectCompany": "Practitioner / Establishment",
+  "@newVisitStep1SelectCompany": {
+    "description": "Label for company selector (form screen)"
+  },
+  "newVisitCompanyLabel": "Company",
+  "@newVisitCompanyLabel": {
+    "description": "Label for company dropdown on company screen"
+  },
+  "newVisitSelectCompanyHint": "Select a company",
+  "@newVisitSelectCompanyHint": {
+    "description": "Hint for company dropdown"
+  },
+  "newVisitStep1SelectHint": "Select a practitioner",
+  "@newVisitStep1SelectHint": {
+    "description": "Placeholder for company dropdown"
+  },
+  "newVisitCancel": "Cancel",
+  "@newVisitCancel": {
+    "description": "Cancel button"
+  },
+  "newVisitContinue": "Continue",
+  "@newVisitContinue": {
+    "description": "Continue button"
+  },
+  "newRequestHeading": "New Request",
+  "@newRequestHeading": {
+    "description": "Heading on new visit form"
+  },
+  "newRequestSubtitle": "Please fill in the information regarding your next medical visit.",
+  "@newRequestSubtitle": {
+    "description": "Subtitle on new visit form"
+  },
+  "newVisitVisitDate": "Date of the visit",
+  "@newVisitVisitDate": {
+    "description": "Visit date label"
+  },
+  "newVisitObjective": "Objective of the visit",
+  "@newVisitObjective": {
+    "description": "Objective/comment label"
+  },
+  "newVisitObjectiveHint": "Describe the main objective and the products to present...",
+  "@newVisitObjectiveHint": {
+    "description": "Placeholder for objective field"
+  },
+  "newVisitSendRequest": "Create visit",
+  "@newVisitSendRequest": {
+    "description": "Submit button"
+  },
+  "newVisitLoadCompaniesError": "Failed to load companies",
+  "@newVisitLoadCompaniesError": {
+    "description": "Error loading companies list"
+  },
+  "newVisitLoadDataError": "Failed to load form data",
+  "@newVisitLoadDataError": {
+    "description": "Error loading new visit data"
+  },
+  "newVisitCreateError": "Failed to create visit",
+  "@newVisitCreateError": {
+    "description": "Error creating visit"
+  },
+  "newVisitCreateSuccess": "Visit created successfully",
+  "@newVisitCreateSuccess": {
+    "description": "Success message after creating a visit"
+  },
+  "newVisitSelectCompanyFirst": "Please select a company",
+  "@newVisitSelectCompanyFirst": {
+    "description": "Validation when continuing without selection"
+  },
+  "newVisitTitleRequired": "Title is required",
+  "@newVisitTitleRequired": {
+    "description": "Validation for empty title"
+  },
+  "newVisitVisitorRequired": "Please select a GSB visitor",
+  "@newVisitVisitorRequired": {
+    "description": "Validation when visitor not selected"
+  },
+  "newVisitEmployeeRequired": "Please select a client",
+  "@newVisitEmployeeRequired": {
+    "description": "Validation when client not selected"
+  },
+  "newVisitSelectVisitor": "Select a visitor",
+  "@newVisitSelectVisitor": {
+    "description": "Visitor dropdown hint"
+  },
+  "newVisitSelectProduct": "Select a product",
+  "@newVisitSelectProduct": {
+    "description": "Product dropdown hint"
+  },
+  "newVisitGsbVisitorLabel": "GSB Visitor",
+  "@newVisitGsbVisitorLabel": {
+    "description": "Label for GSB visitor dropdown"
+  },
+  "newVisitEmployeeLabel": "Client",
+  "@newVisitEmployeeLabel": {
+    "description": "Label for client dropdown"
+  },
+  "newVisitSelectEmployee": "Select a client",
+  "@newVisitSelectEmployee": {
+    "description": "Hint for client dropdown"
+  },
+  "newVisitProductLabel": "Product",
+  "@newVisitProductLabel": {
+    "description": "Label for product dropdown"
+  },
+  "newVisitFormTitleLabel": "Visit title",
+  "@newVisitFormTitleLabel": {
+    "description": "Label for visit title field"
+  },
+  "visitDetailsFeedbackBtn": "Feedback",
+  "@visitDetailsFeedbackBtn": {
+    "description": "Button to open feedback screen"
+  },
+  "visitDetailsDeleteBtn": "Delete",
+  "@visitDetailsDeleteBtn": {
+    "description": "Delete visit button"
+  },
+  "visitDetailsDeleteConfirmTitle": "Delete visit?",
+  "@visitDetailsDeleteConfirmTitle": {
+    "description": "Delete confirmation dialog title"
+  },
+  "visitDetailsDeleteConfirmMessage": "This visit will be permanently deleted.",
+  "@visitDetailsDeleteConfirmMessage": {
+    "description": "Delete confirmation dialog message"
+  },
+  "visitDetailsDeleteSuccess": "Visit deleted",
+  "@visitDetailsDeleteSuccess": {
+    "description": "Success message after deleting a visit"
+  },
+  "visitDetailsDeleteError": "Failed to delete visit",
+  "@visitDetailsDeleteError": {
+    "description": "Error when delete visit fails"
+  },
+  "visitFeedbackTitle": "Visit Report",
+  "@visitFeedbackTitle": {
+    "description": "Feedback screen title"
+  },
+  "visitFeedbackReportTitle": "VISIT REPORT",
+  "@visitFeedbackReportTitle": {
+    "description": "Report section title"
+  },
+  "visitFeedbackYourOpinion": "YOUR OPINION",
+  "@visitFeedbackYourOpinion": {
+    "description": "Feedback section title"
+  },
+  "visitFeedbackRateLabel": "RATE THIS CONSULTATION",
+  "@visitFeedbackRateLabel": {
+    "description": "Rating label"
+  },
+  "visitFeedbackAdditionalComments": "ADDITIONAL COMMENTS",
+  "@visitFeedbackAdditionalComments": {
+    "description": "Comment field section title"
+  },
+  "visitFeedbackCommentHint": "What did you think of this visit?",
+  "@visitFeedbackCommentHint": {
+    "description": "Comment placeholder"
+  },
+  "visitFeedbackSendBtn": "Send Feedback",
+  "@visitFeedbackSendBtn": {
+    "description": "Submit feedback button"
+  },
+  "visitFeedbackLoadError": "Failed to load visit",
+  "@visitFeedbackLoadError": {
+    "description": "Error loading visit for feedback"
+  },
+  "visitFeedbackSubmitError": "Failed to send feedback",
+  "@visitFeedbackSubmitError": {
+    "description": "Error submitting feedback"
+  },
+  "visitsFeedbackSuccess": "Feedback sent",
+  "@visitsFeedbackSuccess": {
+    "description": "Success after sending feedback"
   }
 }

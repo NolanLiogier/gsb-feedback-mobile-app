@@ -47,4 +47,41 @@ async function findUserById(userId) {
   return result.rows[0] ?? null;
 }
 
-module.exports = { findUserByEmail, findUserById };
+async function getEmployeesByCompanyId(companyId) {
+  const id = typeof companyId === "number" ? companyId : Number(companyId);
+  if (!Number.isInteger(id) || id < 1) {
+    throw new RangeError("companyId must be a positive integer");
+  }
+  const result = await pool.query(
+    `SELECT users.user_id AS id,
+            (users.firstname || ' ' || users.lastname) AS name,
+            functions.fonction_name AS function
+     FROM users
+     INNER JOIN functions ON users.fk_function_id = functions.fonction_id
+     WHERE users.fk_company_id = $1
+     ORDER BY users.lastname, users.firstname`,
+    [id]
+  );
+  return result.rows ?? [];
+}
+
+async function getEmployeesByCompanyAndFunction(companyId, functionId) {
+  const result = await pool.query(
+    `SELECT users.user_id,
+            (users.firstname || ' ' || users.lastname) AS user_name,
+            functions.fonction_name AS function
+     FROM users
+     INNER JOIN functions ON users.fk_function_id = functions.fonction_id
+     WHERE users.fk_company_id = $1 AND users.fk_function_id = $2
+     ORDER BY users.lastname, users.firstname`,
+    [companyId, functionId]
+  );
+  return result.rows ?? [];
+}
+
+module.exports = {
+  findUserByEmail,
+  findUserById,
+  getEmployeesByCompanyId,
+  getEmployeesByCompanyAndFunction,
+};

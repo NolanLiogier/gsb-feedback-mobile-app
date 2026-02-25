@@ -6,7 +6,9 @@ class VisitDetails {
     this.closureDate,
     this.creationDate,
     this.comment,
+    required this.statusId,
     required this.statusName,
+    this.rate,
     required this.companyName,
     required this.companyAddress,
     required this.clientName,
@@ -20,7 +22,9 @@ class VisitDetails {
   final String? closureDate;
   final String? creationDate;
   final String? comment;
+  final int statusId;
   final String statusName;
+  final int? rate;
   final String companyName;
   final String companyAddress;
   final String clientName;

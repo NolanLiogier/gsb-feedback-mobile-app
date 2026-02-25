@@ -132,4 +132,144 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get visitDetailsCreationDate => 'Date de création';
+
+  @override
+  String get visitDetailsRatingLabel => 'Votre note';
+
+  @override
+  String get newVisitTitle => 'Créer une Visite';
+
+  @override
+  String get newVisitStep1SelectCompany => 'Praticien / Établissement';
+
+  @override
+  String get newVisitCompanyLabel => 'Établissement';
+
+  @override
+  String get newVisitSelectCompanyHint => 'Sélectionner un établissement';
+
+  @override
+  String get newVisitStep1SelectHint => 'Sélectionner un praticien';
+
+  @override
+  String get newVisitCancel => 'Annuler';
+
+  @override
+  String get newVisitContinue => 'Continuer';
+
+  @override
+  String get newRequestHeading => 'Nouvelle Demande';
+
+  @override
+  String get newRequestSubtitle =>
+      'Veuillez remplir les informations concernant votre prochaine visite médicale.';
+
+  @override
+  String get newVisitVisitDate => 'Date de la visite';
+
+  @override
+  String get newVisitObjective => 'Objectif de la visite';
+
+  @override
+  String get newVisitObjectiveHint =>
+      'Décrivez l\'objectif principal et les produits à présenter...';
+
+  @override
+  String get newVisitSendRequest => 'Créer la visite';
+
+  @override
+  String get newVisitLoadCompaniesError =>
+      'Échec du chargement des établissements';
+
+  @override
+  String get newVisitLoadDataError => 'Échec du chargement des données';
+
+  @override
+  String get newVisitCreateError => 'Échec de la création de la visite';
+
+  @override
+  String get newVisitCreateSuccess => 'Visite créée avec succès';
+
+  @override
+  String get newVisitSelectCompanyFirst =>
+      'Veuillez sélectionner un établissement';
+
+  @override
+  String get newVisitTitleRequired => 'Le titre est requis';
+
+  @override
+  String get newVisitVisitorRequired => 'Veuillez sélectionner un visiteur GSB';
+
+  @override
+  String get newVisitEmployeeRequired => 'Veuillez sélectionner un client';
+
+  @override
+  String get newVisitSelectVisitor => 'Sélectionner un visiteur';
+
+  @override
+  String get newVisitSelectProduct => 'Sélectionner un produit';
+
+  @override
+  String get newVisitGsbVisitorLabel => 'Visiteur GSB';
+
+  @override
+  String get newVisitEmployeeLabel => 'Client';
+
+  @override
+  String get newVisitSelectEmployee => 'Sélectionner un client';
+
+  @override
+  String get newVisitProductLabel => 'Produit';
+
+  @override
+  String get newVisitFormTitleLabel => 'Titre de la visite';
+
+  @override
+  String get visitDetailsFeedbackBtn => 'Avis';
+
+  @override
+  String get visitDetailsDeleteBtn => 'Supprimer';
+
+  @override
+  String get visitDetailsDeleteConfirmTitle => 'Supprimer la visite ?';
+
+  @override
+  String get visitDetailsDeleteConfirmMessage =>
+      'Cette visite sera définitivement supprimée.';
+
+  @override
+  String get visitDetailsDeleteSuccess => 'Visite supprimée';
+
+  @override
+  String get visitDetailsDeleteError => 'Échec de la suppression';
+
+  @override
+  String get visitFeedbackTitle => 'Compte-rendu de visite';
+
+  @override
+  String get visitFeedbackReportTitle => 'RAPPORT DE VISITE';
+
+  @override
+  String get visitFeedbackYourOpinion => 'VOTRE AVIS';
+
+  @override
+  String get visitFeedbackRateLabel => 'NOTEZ CETTE CONSULTATION';
+
+  @override
+  String get visitFeedbackAdditionalComments => 'COMMENTAIRES ADDITIONNELS';
+
+  @override
+  String get visitFeedbackCommentHint => 'Qu\'avez-vous pensé de cette visite?';
+
+  @override
+  String get visitFeedbackSendBtn => 'Envoyer l\'avis';
+
+  @override
+  String get visitFeedbackLoadError => 'Échec du chargement';
+
+  @override
+  String get visitFeedbackSubmitError => 'Échec de l\'envoi de l\'avis';
+
+  @override
+  String get visitsFeedbackSuccess => 'Avis envoyé';
 }

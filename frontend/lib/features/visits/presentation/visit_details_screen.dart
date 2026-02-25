@@ -7,6 +7,7 @@ import 'package:frontend/core/constants/app_text_styles.dart';
 import 'package:frontend/core/services/api_service.dart';
 import 'package:frontend/features/visits/domain/visit_details.dart';
 import 'package:frontend/l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
 
 class VisitDetailsScreen extends StatefulWidget {
   const VisitDetailsScreen({super.key, required this.visitId});
@@ -51,10 +52,49 @@ class _VisitDetailsScreenState extends State<VisitDetailsScreen> {
     }
   }
 
+  Future<void> _confirmDelete(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext ctx) => AlertDialog(
+        title: Text(l10n.visitDetailsDeleteConfirmTitle),
+        content: Text(l10n.visitDetailsDeleteConfirmMessage),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: Text(l10n.newVisitCancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            style: FilledButton.styleFrom(backgroundColor: AppColors.danger),
+            child: Text(l10n.visitDetailsDeleteBtn),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true || !mounted) return;
+    final result = await ApiService.deleteVisit(widget.visitId);
+    if (!mounted) return;
+    if (result.statusCode == 200) {
+      context.go('/visits', extra: 'delete_success');
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            result.body?['message'] as String? ?? l10n.visitDetailsDeleteError,
+          ),
+          backgroundColor: AppColors.danger,
+        ),
+      );
+    }
+  }
+
   VisitDetails? _parseVisitDetails(dynamic data) {
     if (data is! Map<String, dynamic>) return null;
     final visitId = _parseInt(data['visit_id']);
     if (visitId == null) return null;
+    final statusId = _parseInt(data['status_id']) ?? _parseInt(data['fk_status_id']);
+    if (statusId == null) return null;
     return VisitDetails(
       visitId: visitId,
       visitTitle: _toString(data['visit_title']) ?? '',
@@ -62,7 +102,9 @@ class _VisitDetailsScreenState extends State<VisitDetailsScreen> {
       closureDate: _toString(data['closure_date']),
       creationDate: _toString(data['creation_date']),
       comment: _toString(data['comment']),
+      statusId: statusId,
       statusName: _toString(data['status_name']) ?? '',
+      rate: _parseInt(data['feedback']),
       companyName: _toString(data['company_name']) ?? '',
       companyAddress: _toString(data['company_address']) ?? '',
       clientName: _toString(data['client_name']) ?? '',
@@ -185,6 +227,44 @@ class _VisitDetailsScreenState extends State<VisitDetailsScreen> {
           _buildCommentCard(context, visitDetails),
           const SizedBox(height: AppSpacing.md),
           _buildClientCard(context, visitDetails),
+          if (visitDetails.statusId == 3 && visitDetails.rate != null) ...[
+            const SizedBox(height: AppSpacing.lg),
+            _buildRatingCard(context, visitDetails),
+          ],
+          const SizedBox(height: AppSpacing.lg),
+          if (visitDetails.statusId != 3) ...[
+            SizedBox(
+              height: 52,
+              child: OutlinedButton.icon(
+                onPressed: () => context.push('/visits/${widget.visitId}/feedback'),
+                icon: const Icon(Icons.rate_review_outlined, size: 22),
+                label: Text(AppLocalizations.of(context)!.visitDetailsFeedbackBtn),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: AppColors.accentPurple,
+                  side: const BorderSide(color: AppColors.accentPurple),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: AppSpacing.sm),
+          ],
+          SizedBox(
+            height: 52,
+            child: OutlinedButton.icon(
+              onPressed: () => _confirmDelete(context),
+              icon: const Icon(Icons.delete_outline, size: 22),
+              label: Text(AppLocalizations.of(context)!.visitDetailsDeleteBtn),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: AppColors.danger,
+                side: const BorderSide(color: AppColors.danger),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -319,6 +399,36 @@ class _VisitDetailsScreenState extends State<VisitDetailsScreen> {
                 padding: const EdgeInsets.all(AppSpacing.sm),
                 child: Icon(Icons.phone, color: AppColors.primaryBlue, size: 24),
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildRatingCard(BuildContext context, VisitDetails visitDetails) {
+    final l10n = AppLocalizations.of(context)!;
+    final rate = visitDetails.rate!;
+    return _Card(
+      title: l10n.visitDetailsRatingLabel,
+      child: Row(
+        children: [
+          ...List.generate(5, (index) {
+            final filled = index < rate;
+            return Padding(
+              padding: const EdgeInsets.only(right: AppSpacing.xs),
+              child: Icon(
+                filled ? Icons.star : Icons.star_border,
+                size: 28,
+                color: filled ? AppColors.warning : AppColors.greyUi,
+              ),
+            );
+          }),
+          const SizedBox(width: AppSpacing.sm),
+          Text(
+            '$rate/5',
+            style: AppTextStyles.titleMedium.copyWith(
+              color: AppColors.falseBlack,
             ),
           ),
         ],

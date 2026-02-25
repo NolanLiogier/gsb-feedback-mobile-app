@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frontend/core/constants/app_colors.dart';
 import 'package:frontend/core/constants/app_spacing.dart';
 import 'package:frontend/core/constants/app_text_styles.dart';
+import 'package:frontend/core/navigation/route_observer.dart';
 import 'package:frontend/core/services/api_service.dart';
 import 'package:frontend/core/services/user_preferences.dart';
 import 'package:frontend/features/visits/domain/visit.dart';
@@ -9,16 +10,21 @@ import 'package:frontend/features/visits/presentation/widgets/visit_card.dart';
 import 'package:frontend/l10n/app_localizations.dart';
 import 'package:frontend/shared/app_bar.dart';
 import 'package:frontend/shared/app_nav_bar.dart';
+import 'package:frontend/shared/app_notification.dart';
 import 'package:go_router/go_router.dart';
 
 class VisitsScreen extends StatefulWidget {
-  const VisitsScreen({super.key});
+  const VisitsScreen({super.key, this.showCreateSuccess = false, this.showFeedbackSuccess = false, this.showDeleteSuccess = false});
+
+  final bool showCreateSuccess;
+  final bool showFeedbackSuccess;
+  final bool showDeleteSuccess;
 
   @override
   State<VisitsScreen> createState() => _VisitsScreenState();
 }
 
-class _VisitsScreenState extends State<VisitsScreen> {
+class _VisitsScreenState extends State<VisitsScreen> with RouteAware {
   List<Visit> _visits = [];
   bool _loading = true;
   String? _error;
@@ -27,6 +33,70 @@ class _VisitsScreenState extends State<VisitsScreen> {
   void initState() {
     super.initState();
     _loadVisits();
+    _showPendingSnackBar();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final route = ModalRoute.of(context);
+    if (route is ModalRoute<void>) {
+      appRouteObserver.subscribe(this, route);
+    }
+  }
+
+  @override
+  void dispose() {
+    appRouteObserver.unsubscribe(this);
+    super.dispose();
+  }
+
+  @override
+  void didUpdateWidget(covariant VisitsScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    final hadSuccess = oldWidget.showCreateSuccess ||
+        oldWidget.showFeedbackSuccess ||
+        oldWidget.showDeleteSuccess;
+    final hasSuccess = widget.showCreateSuccess ||
+        widget.showFeedbackSuccess ||
+        widget.showDeleteSuccess;
+    if (hasSuccess && !hadSuccess) {
+      _loadVisits();
+      _showPendingSnackBar();
+    }
+  }
+
+  @override
+  void didPopNext() {
+    _loadVisits();
+  }
+
+  void _showPendingSnackBar() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final l10n = AppLocalizations.of(context)!;
+      if (widget.showCreateSuccess) {
+        showAppNotification(
+          context,
+          message: l10n.newVisitCreateSuccess,
+          type: AppNotificationType.success,
+        );
+      }
+      if (widget.showFeedbackSuccess) {
+        showAppNotification(
+          context,
+          message: l10n.visitsFeedbackSuccess,
+          type: AppNotificationType.success,
+        );
+      }
+      if (widget.showDeleteSuccess) {
+        showAppNotification(
+          context,
+          message: l10n.visitDetailsDeleteSuccess,
+          type: AppNotificationType.success,
+        );
+      }
+    });
   }
 
   Future<void> _loadVisits() async {
@@ -113,6 +183,11 @@ class _VisitsScreenState extends State<VisitsScreen> {
         onLogout: _handleLogout,
       ),
       body: _buildBody(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _onNewVisit,
+        backgroundColor: AppColors.primaryBlue,
+        child: const Icon(Icons.add, color: AppColors.surface),
+      ),
       bottomNavigationBar: _buildBottomNav(context),
     );
   }
@@ -147,6 +222,10 @@ class _VisitsScreenState extends State<VisitsScreen> {
       separatorBuilder: (context, index) => const SizedBox(height: AppSpacing.md),
       itemBuilder: (context, index) => VisitCard(visit: _visits[index]),
     );
+  }
+
+  void _onNewVisit() {
+    context.push('/visits/new');
   }
 
   Widget _buildBottomNav(BuildContext context) {
